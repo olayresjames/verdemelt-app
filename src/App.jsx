@@ -150,7 +150,7 @@ function App() {
             onClick={() => setHasStarted(true)}
             className="group bg-sage-green text-black px-10 py-5 rounded-full font-bold text-xl hover:bg-soft-green hover:text-dark-green transition-all duration-300 shadow-[0_0_30px_rgba(143,151,121,0.6)] hover:shadow-[0_0_40px_rgba(209,232,226,0.5)] flex items-center gap-3 border-2 border-sage-green/50 hover:border-soft-green"
           >
-            Start Shopping
+            Start Ordering
             <ChevronRight className="group-hover:translate-x-2 transition-transform" />
           </button>
           
