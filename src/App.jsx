@@ -4,7 +4,7 @@ import { menuData } from './data/menu';
 
 // --- FIREBASE IMPORTS ---
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from './firebase'; 
+import { db, isFirebaseConfigValid } from './firebase'; 
 
 function App() {
   const [hasStarted, setHasStarted] = useState(false);
@@ -69,17 +69,45 @@ function App() {
 
   const closeModal = () => setSelectedProduct(null);
 
+  const addDocWithTimeout = (promise, ms) => {
+    return new Promise((resolve, reject) => {
+      const timeout = setTimeout(() => {
+        reject(new Error('Request timed out (network issue or blocked request).'));
+      }, ms);
+
+      promise
+        .then((res) => {
+          clearTimeout(timeout);
+          resolve(res);
+        })
+        .catch((err) => {
+          clearTimeout(timeout);
+          reject(err);
+        });
+    });
+  };
+
   const handleCheckout = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    if (!isFirebaseConfigValid) {
+      alert('Firebase is not configured correctly. Please set your environment variables and restart the app.');
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
-      await addDoc(collection(db, 'orders'), {
-        customer: customer,
-        items: cart,
-        totalAmount: cartTotal,
-        status: 'pending', 
-        createdAt: serverTimestamp()
-      });
+      await addDocWithTimeout(
+        addDoc(collection(db, 'orders'), {
+          customer: customer,
+          items: cart,
+          totalAmount: cartTotal,
+          status: 'pending', 
+          createdAt: serverTimestamp()
+        }),
+        15000
+      );
       setCart([]);
       setOrderSuccess(true);
       setIsCheckingOut(false);

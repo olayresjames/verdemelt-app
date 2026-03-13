@@ -10,5 +10,29 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
-const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
+const isFirebaseConfigValid = [
+  'apiKey',
+  'authDomain',
+  'projectId',
+  'storageBucket',
+  'messagingSenderId',
+  'appId'
+].every((key) => {
+  const value = firebaseConfig[key];
+  return typeof value === 'string' && value.trim() !== '' && value.trim().toLowerCase() !== 'undefined';
+});
+
+if (!isFirebaseConfigValid) {
+  console.warn(
+    'Missing or invalid Firebase config. Make sure VITE_FIREBASE_* environment variables are set (e.g., in .env or your deployment platform).'
+  );
+}
+
+let app;
+let db;
+if (isFirebaseConfigValid) {
+  app = initializeApp(firebaseConfig);
+  db = getFirestore(app);
+}
+
+export { db, isFirebaseConfigValid };
