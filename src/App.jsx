@@ -170,7 +170,7 @@ function App() {
             <img src="/images/logo.png" alt="VerdéMelt Logo" className="w-full h-full object-contain" />
           </div>
 
-          <p className="text-xl md:text-2xl text-sage-green mb-12 font-medium max-w-md drop-shadow-[0_0_15px_rgba(143,151,121,0.3)]">
+          <p className="text-xl md:text-2xl text-cream mb-12 font-medium max-w-md drop-shadow-[0_0_15px_rgba(143,151,121,0.3)]">
             Taste That Melts, Green That Helps.
           </p>
 
@@ -183,36 +183,36 @@ function App() {
           </button>
 
           <div className="mt-10 flex flex-col items-center gap-3">
-            <p className="text-sm text-sage-green/70 uppercase tracking-wide font-semibold">Stay connected</p>
+            <p className="text-sm text-cream/70 uppercase tracking-wide font-semibold">Stay connected</p>
             <div className="flex flex-wrap justify-center gap-3">
               <a
                 href="https://www.facebook.com/verdeco0?"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 px-4 py-2 bg-black/30 border border-sage-green/40 rounded-full text-sage-green text-sm font-semibold hover:bg-sage-green/20 hover:border-sage-green/70 transition"
+                className="group inline-flex items-center gap-2 px-4 py-2 bg-black/30 border border-sage-green/40 rounded-full text-cream text-sm font-semibold hover:bg-sage-green/20 hover:border-sage-green/70 transition"
               >
                 Facebook
-                <ChevronRight className="h-4 w-4 text-sage-green transition-transform group-hover:translate-x-1" />
+                <ChevronRight className="h-4 w-4 text-cream transition-transform group-hover:translate-x-1" />
               </a>
 
               <a
                 href="https://www.instagram.com/itsverdeco0"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 px-4 py-2 bg-black/30 border border-sage-green/40 rounded-full text-sage-green text-sm font-semibold hover:bg-sage-green/20 hover:border-sage-green/70 transition"
+                className="group inline-flex items-center gap-2 px-4 py-2 bg-black/30 border border-sage-green/40 rounded-full text-cream text-sm font-semibold hover:bg-sage-green/20 hover:border-sage-green/70 transition"
               >
                 Instagram
-                <ChevronRight className="h-4 w-4 text-sage-green transition-transform group-hover:translate-x-1" />
+                <ChevronRight className="h-4 w-4 text-cream transition-transform group-hover:translate-x-1" />
               </a>
 
               <a
                 href="https://www.tiktok.com/@xoxo4eya?_r=1&_t=ZS-94OumS6b9gC"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 px-4 py-2 bg-black/30 border border-sage-green/40 rounded-full text-sage-green text-sm font-semibold hover:bg-sage-green/20 hover:border-sage-green/70 transition"
+                className="group inline-flex items-center gap-2 px-4 py-2 bg-black/30 border border-sage-green/40 rounded-full text-cream text-sm font-semibold hover:bg-sage-green/20 hover:border-sage-green/70 transition"
               >
                 TikTok
-                <ChevronRight className="h-4 w-4 text-sage-green transition-transform group-hover:translate-x-1" />
+                <ChevronRight className="h-4 w-4 text-cream transition-transform group-hover:translate-x-1" />
               </a>
             </div>
           </div>
