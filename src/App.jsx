@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Leaf, X, Plus, Minus, ChevronRight, CheckCircle, Coffee, Check } from 'lucide-react';
+import { ShoppingBag, Leaf, X, Plus, Minus, ChevronRight, CheckCircle, Coffee, Check, Trash2 } from 'lucide-react';
 import { menuData } from './data/menu';
 
 // --- FIREBASE IMPORTS ---
@@ -52,6 +52,10 @@ function App() {
       }
       return item;
     }).filter(item => item.quantity > 0));
+  };
+
+  const removeFromCart = (id) => {
+    setCart(prev => prev.filter(item => item.id !== id));
   };
 
   const cartTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
@@ -348,6 +352,11 @@ function App() {
                       <button onClick={() => updateCartQuantity(item.id, 1)} className="p-1 text-sage-green hover:text-cream transition"><Plus size={16} /></button>
                       <span className="font-bold text-sm w-4 text-center text-cream">{item.quantity}</span>
                       <button onClick={() => updateCartQuantity(item.id, -1)} className="p-1 text-sage-green hover:text-cream transition"><Minus size={16} /></button>
+                      <form onSubmit={(e) => { e.preventDefault(); removeFromCart(item.id); }} className="mt-1">
+                        <button type="submit" className="p-1 text-rose-400 hover:text-rose-200 transition" aria-label="Remove item">
+                          <Trash2 size={16} />
+                        </button>
+                      </form>
                     </div>
                   </div>
                 ))
