@@ -181,7 +181,42 @@ function App() {
             Start Ordering
             <ChevronRight className="group-hover:translate-x-2 transition-transform" />
           </button>
-          
+
+          <div className="mt-10 flex flex-col items-center gap-3">
+            <p className="text-sm text-sage-green/70 uppercase tracking-wide font-semibold">Stay connected</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <a
+                href="https://www.facebook.com/verdeco0?"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 px-4 py-2 bg-black/30 border border-sage-green/40 rounded-full text-sage-green text-sm font-semibold hover:bg-sage-green/20 hover:border-sage-green/70 transition"
+              >
+                Facebook
+                <ChevronRight className="h-4 w-4 text-sage-green transition-transform group-hover:translate-x-1" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/itsverdeco0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 px-4 py-2 bg-black/30 border border-sage-green/40 rounded-full text-sage-green text-sm font-semibold hover:bg-sage-green/20 hover:border-sage-green/70 transition"
+              >
+                Instagram
+                <ChevronRight className="h-4 w-4 text-sage-green transition-transform group-hover:translate-x-1" />
+              </a>
+
+              <a
+                href="https://www.tiktok.com/@xoxo4eya?_r=1&_t=ZS-94OumS6b9gC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 px-4 py-2 bg-black/30 border border-sage-green/40 rounded-full text-sage-green text-sm font-semibold hover:bg-sage-green/20 hover:border-sage-green/70 transition"
+              >
+                TikTok
+                <ChevronRight className="h-4 w-4 text-sage-green transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+          </div>
+
           <div className="mt-8 flex gap-2">
             <span className="w-2 h-2 rounded-full bg-sage-green/50"></span>
             <span className="w-2 h-2 rounded-full bg-sage-green/30"></span>

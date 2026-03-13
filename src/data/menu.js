@@ -13,9 +13,9 @@ export const menuData = {
     { id: 's5', name: 'Spinach Moringa', price: 59, image: '/images/spinach-moringa.jpg' },
   ],
   combos: [
-    { id: 'c1', name: 'Eggplant Patty & Juice', price: 80, image: '/images/combo-eggplant.jpg' },
-    { id: 'c2', name: 'Cabbage Patty & Juice', price: 80, image: '/images/combo-cabbage.jpg' },
-    { id: 'c3', name: 'Squash Patty & Juice', price: 80, image: '/images/combo-squash.jpg' },
-    { id: 'c4', name: 'Malunggay Patty & Carrot Juice', price: 80, image: '/images/combo-malunggay.jpg' },
+    { id: 'c1', name: 'Eggplant Patty & Eggplant Drink', price: 80, image: '/images/combo-eggplant.jpg' },
+    { id: 'c2', name: 'Cabbage Patty & Cabbage Drink', price: 80, image: '/images/combo-cabbage.jpg' },
+    { id: 'c3', name: 'Squash Patty & Squash Drink', price: 80, image: '/images/combo-squash.jpg' },
+    { id: 'c4', name: 'Malunggay Patty & Carrot Drink', price: 80, image: '/images/combo-malunggay.jpg' },
   ]
 };
